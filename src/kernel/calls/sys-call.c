@@ -1134,7 +1134,7 @@ void s_register_end() {
         child_proc->status == PROCESS_STATUS_RUNNING) {
       log_event(get_kernel_ticks(), "ORPHAN", child_proc->pid,
                 child_proc->priority_level, child_proc->name);
-      child_proc->ppid = 0;
+      child_proc->ppid = 1;
     }
   }
   // Set the process as a zombie
